@@ -154,7 +154,7 @@ export const StatSummaryStrip: React.FC<StatSummaryStripProps> = ({
     },
     {
       id: 'conservatory-fellow',
-      title: 'Conservatory Fellow',
+      title: 'Fellow',
       desc: 'Attain 20 graded certifications across performance, theory, and production',
       icon: '🎹',
       unlocked: musicCompleted >= 20,

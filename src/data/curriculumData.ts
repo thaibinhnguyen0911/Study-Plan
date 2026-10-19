@@ -39,6 +39,12 @@ export interface MusicItem {
   status: 'Core' | 'Context-track' | 'Consultative';
   year: string;
   hours: number;
+  source?: string;
+  sourceUrl?: string;
+  sourceDate?: string;
+  isCumulativeFromZero?: boolean;
+  isCumulativeFromGrade5?: boolean;
+  cumulativeScope?: string;
 }
 
 export const STAGE_CONFIG: Record<number, { name: string; color: string }> = {
@@ -513,7 +519,7 @@ export const REVISED_MUSIC_WORKS: MusicItem[] = [
   { id: 'MUS-09', orderNum: 9, title: 'RSL Level 2 Award in Dance — Grade 3', subject: 'Dance', stage: 200, stageName: 'Antiquity and Classical Worlds', lane: 'Context', status: 'Context-track', year: '2028', hours: 80 },
   { id: 'MUS-10', orderNum: 10, title: 'LCM Musical Theatre Grade 5', subject: 'Musical Theatre', stage: 200, stageName: 'Antiquity and Classical Worlds', lane: 'Spine', status: 'Core', year: '2029', hours: 110 },
   { id: 'MUS-11', orderNum: 11, title: 'ABRSM Classical Singing Grade 5', subject: 'Classical Singing', stage: 200, stageName: 'Antiquity and Classical Worlds', lane: 'Spine', status: 'Core', year: '2029', hours: 90 },
-  { id: 'MUS-12', orderNum: 12, title: 'ABRSM Music Theory Grade 5', subject: 'Music Theory', stage: 200, stageName: 'Antiquity and Classical Worlds', lane: 'Reference', status: 'Consultative', year: '2029', hours: 30 },
+  { id: 'MUS-12', orderNum: 12, title: 'ABRSM Music Theory Grade 5', subject: 'Music Theory', stage: 200, stageName: 'Antiquity and Classical Worlds', lane: 'Reference', status: 'Consultative', year: '2029', hours: 260, source: 'ABRSM', sourceUrl: 'https://www.abrsm.org/sites/default/files/2023-09/Music%20Theory%20Qual%20Spec%20April%202023%20[2023%20rebrand].pdf', sourceDate: 'April 2023', isCumulativeFromZero: true, cumulativeScope: 'Grades 1-5 Total Qualification Time (20+30+50+70+90=260 hrs)' },
   { id: 'MUS-13', orderNum: 13, title: 'RSL Level 2 Award in Dance — Grade 4', subject: 'Dance', stage: 200, stageName: 'Antiquity and Classical Worlds', lane: 'Context', status: 'Context-track', year: '2030', hours: 110 },
   { id: 'MUS-14', orderNum: 14, title: 'LCM Musical Theatre Grade 6', subject: 'Musical Theatre', stage: 200, stageName: 'Antiquity and Classical Worlds', lane: 'Spine', status: 'Core', year: '2030', hours: 80 },
 
@@ -524,7 +530,7 @@ export const REVISED_MUSIC_WORKS: MusicItem[] = [
   { id: 'MUS-19', orderNum: 19, title: 'RSL Level 3 Certificate in Dance — Grade 6', subject: 'Dance', stage: 300, stageName: 'Medieval and Early Worlds', lane: 'Context', status: 'Context-track', year: '2032', hours: 150 },
   { id: 'MUS-20', orderNum: 20, title: 'LCM Musical Theatre Grade 8', subject: 'Musical Theatre', stage: 300, stageName: 'Medieval and Early Worlds', lane: 'Spine', status: 'Core', year: '2033', hours: 100 },
   { id: 'MUS-21', orderNum: 21, title: 'ABRSM Classical Singing Grade 8', subject: 'Classical Singing', stage: 300, stageName: 'Medieval and Early Worlds', lane: 'Spine', status: 'Core', year: '2034', hours: 230 },
-  { id: 'MUS-22', orderNum: 22, title: 'Trinity Music Theory Grade 8', subject: 'Music Theory', stage: 300, stageName: 'Medieval and Early Worlds', lane: 'Reference', status: 'Consultative', year: '2034', hours: 90 },
+  { id: 'MUS-22', orderNum: 22, title: 'ABRSM Music Theory Grade 8', subject: 'Music Theory', stage: 300, stageName: 'Medieval and Early Worlds', lane: 'Reference', status: 'Consultative', year: '2034', hours: 510, source: 'ABRSM', sourceUrl: 'https://www.abrsm.org/sites/default/files/2023-09/Music%20Theory%20Qual%20Spec%20April%202023%20[2023%20rebrand].pdf', sourceDate: 'April 2023', isCumulativeFromGrade5: true, cumulativeScope: 'Grades 6-8 Total Qualification Time (130+170+210=510 hrs), cumulative from Grade 5 completion' },
   { id: 'MUS-23', orderNum: 23, title: 'RSL Level 3 Certificate in Dance — Grade 7', subject: 'Dance', stage: 300, stageName: 'Medieval and Early Worlds', lane: 'Context', status: 'Context-track', year: '2035', hours: 150 },
 
   { id: 'MUS-24', orderNum: 24, title: 'LCM Musical Theatre DipLCM', subject: 'Musical Theatre', stage: 400, stageName: 'Early Modern', lane: 'Spine', status: 'Core', year: '2036', hours: 360 },

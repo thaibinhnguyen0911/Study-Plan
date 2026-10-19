@@ -140,7 +140,7 @@ export const MusicView: React.FC<MusicViewProps> = ({
               <Music className="w-4 h-4" />
             </div>
             <h1 className="font-serif text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-              Western & World Music Conservatory
+              Western Western & World Music Conservatory World Music
             </h1>
           </div>
           <p className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
@@ -182,7 +182,7 @@ export const MusicView: React.FC<MusicViewProps> = ({
           <Award className="w-5 h-5 text-amber-500 shrink-0" />
           <div>
             <div className="text-xs font-mono font-medium text-zinc-500 dark:text-zinc-400">
-              Conservatory Milestones Certified
+              Milestones Certified
             </div>
             <div className="text-lg font-serif font-bold text-zinc-900 dark:text-zinc-100">
               {completedItems.length}{' '}
@@ -395,27 +395,13 @@ export const MusicView: React.FC<MusicViewProps> = ({
                 </div>
               )}
             </div>
-          </div>
 
-          {/* Track Pacing & Allocation Rule Callout */}
-          <div className="p-3.5 rounded-2xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-800/40 text-xs font-mono text-zinc-700 dark:text-zinc-300 flex items-start gap-2.5">
-            <Clock className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-            <div className="space-y-0.5">
-              <span className="font-bold text-zinc-900 dark:text-zinc-100">
-                Conservatory Allocation Model:
-              </span>
-              <p className="text-zinc-600 dark:text-zinc-400 text-[11px]">
-                Music study allocation: strictly 5 hrs/week until German mastery ({musicScheduleData.germanMasteryDate}) → increases to 10 hrs/week upon German mastery (supporting dual language tracks) → elevates to 20 hrs/week once all 24 languages are fully mastered ({musicScheduleData.finalLanguageName}, {musicScheduleData.finalLanguageDate}).
-              </p>
-            </div>
-          </div>
-
-          {/* Upcoming Conservatory Pipeline */}
+          {/* Upcoming Pipeline */}
           {upcomingQueue.length > 0 && (
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <h3 className="font-serif text-lg font-bold text-zinc-900 dark:text-zinc-100">
-                  Upcoming Conservatory Queue
+                  Upcoming Queue
                 </h3>
                 <span className="text-xs font-mono text-zinc-400">
                   Next {upcomingQueue.length} qualifications in sequence

@@ -42,15 +42,6 @@ function formatDMY(d: Date): string {
   return `${day}/${month}/${year}`;
 }
 
-/**
- * Calculates the revised Music Conservatory study schedule.
- *
- * Rules:
- * 1. Initial pacing: strictly 5 hours per week from track commencement until
- *    German mastery (29/12/2030).
- * 2. Post-German pacing: Once German is mastered, language shifts to dual 5h/wk and
- *    music increases from 5 to 10 hours per week.
- * 3. Post-Language elevation: Once all 24 languages are acquired, music allocation
  *    elevates to 20 hours per week.
  */
 export function calculateMusicSchedule(
