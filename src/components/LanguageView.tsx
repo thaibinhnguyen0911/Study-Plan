@@ -433,7 +433,7 @@ export const LanguageView: React.FC<LanguageViewProps> = ({
                   <div className="flex items-center justify-between gap-3 pt-3 border-t border-black/[0.05] dark:border-white/[0.06]">
                     <div className="text-[11px] text-zinc-500 font-mono">
                       {scheduleData.isGermanMastered
-                        ? 'Simultaneous 5h/wk allocation alongside Track A.'
+                        ? '5h/wk allocation alongside Track A.'
                         : 'Accrues preparation hours at 5h/wk until promoted to Primary.'}
                     </div>
 
@@ -455,22 +455,6 @@ export const LanguageView: React.FC<LanguageViewProps> = ({
                 </div>
               )}
             </div>
-          </div>
-
-          {/* Concurrent Pacing Rule Callout */}
-          <div className="p-3.5 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-800/40 text-xs font-mono text-zinc-700 dark:text-zinc-300 flex items-start gap-2.5">
-            <Clock className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-            <div className="space-y-0.5">
-              <span className="font-bold text-zinc-900 dark:text-zinc-100">
-                Pacing Mechanics (Pre vs. Post-German):
-              </span>
-              <p className="text-zinc-600 dark:text-zinc-400 text-[11px]">
-                {scheduleData.isGermanMastered
-                  ? `Post-German Model Active: Language studies dual simultaneous tracks at 5 hrs/wk each (10 hrs/wk total). Accrued spillover balances are preserved, and music allocation is accelerated to 10 hrs/wk (elevating to 20 hrs/wk once all 24 languages complete).`
-                  : `Pre-German Phase: Primary receives 10 hrs/wk while Secondary receives 5 hrs/wk (15 hrs/wk combined load). Music receives 5 hrs/wk. Upon German mastery (${scheduleData.germanMasteryDate}), language shifts to dual 5 hrs/wk study (10 hrs/wk total) with preserved spillover balances, and music doubles to 10 hrs/wk.`}
-              </p>
-            </div>
-          </div>
 
           {/* Upcoming Language Pipeline (Queue) */}
           {upcomingQueue.length > 0 && (

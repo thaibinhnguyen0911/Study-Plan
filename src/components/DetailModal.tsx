@@ -236,7 +236,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({
               )}
               {selected.type === 'music' && (
                 <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-amber-100 dark:bg-amber-950/70 text-amber-800 dark:text-amber-200 border border-amber-300/40">
-                  Music Conservatory Track
+                  Music Track
                 </span>
               )}
             </div>
@@ -281,7 +281,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({
                       Concurrent Staggered Schedule (Effective Oct 1, 2026)
                     </span>
                     <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">
-                      {langSched.currentWeeklyHours} hrs/wk allocation
+                      {langSched.currentWeeklyHours} hrs/wk
                     </span>
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] font-mono pt-1">
@@ -304,8 +304,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({
                       <span className="font-bold text-emerald-700 dark:text-emerald-300">{langSched.projectedMasteryDate}</span>
                     </div>
                   </div>
-                  <p className="text-[11px] text-zinc-500 dark:text-zinc-400 leading-relaxed pt-1 border-t border-emerald-200/40 dark:border-emerald-800/30">
-                    Allocated 10 hrs/week while Primary, 5 hrs/week while Secondary pre-German. Shifts to dual 5 hrs/week study post-German with preserved spillover balances.
+                    
                   </p>
                 </div>
               );
@@ -318,7 +317,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-amber-800 dark:text-amber-300 font-bold flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5" />
-                      Conservatory Study Pacing
+                      Study Pacing
                     </span>
                     <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-200">
                       {musicSchedItem ? `${musicSchedItem.weeklyRate} hrs/wk` : '5 hrs/wk'}

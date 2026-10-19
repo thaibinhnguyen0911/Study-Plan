@@ -1038,7 +1038,6 @@ export const LiberalArtsView: React.FC<LiberalArtsViewProps> = ({
 
             <div className="space-y-3 text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
               <p>
-                The master curriculum data has been cleaned and unified. All internal development notes, drafting annotations, and meta-commentary have been purged.
               </p>
               <div className="grid grid-cols-2 gap-2 text-xs font-mono p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-black/5 dark:border-white/5">
                 <div>Total Preserved Works: <strong className="text-zinc-900 dark:text-white">314</strong></div>

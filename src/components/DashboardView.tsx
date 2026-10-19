@@ -132,7 +132,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
     return Math.min(100, Math.max(0, Math.round((progress / range) * 100)));
   }, [completedCount, prevRankThreshold, nextRankThreshold]);
 
-  // Comprehensive Granular Progression Badges & Accolades (29 milestones)
+  // Comprehensive Granular Progression Badges (29 milestones)
   const achievements = useMemo<Achievement[]>(
     () => [
       // --- LIBERAL STUDIES ACCOLADES (10 milestones: 1, 10, 25, 50, 75, 100, 150, 200, 250, 300) ---
@@ -247,7 +247,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         current: liberalCompleted,
       },
 
-      // --- MUSIC CONSERVATORY ACCOLADES (7 milestones: 1, 5, 15, 25, 40, 55, 70) ---
+      // Music Conservatory Accolades
       {
         id: 'mus-1',
         title: 'First Performance Step',
@@ -294,7 +294,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       },
       {
         id: 'mus-40',
-        title: 'Conservatory Fellow',
+        title: 'Fellow',
         desc: 'Earn 40 certifications reaching advanced diploma and recital standards',
         icon: '🎷',
         unlocked: musicCompleted >= 40,
@@ -771,7 +771,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             <div className="flex items-center gap-2">
               <Trophy className="w-4 h-4 text-amber-500" />
               <h2 className="font-serif font-bold text-lg text-zinc-900 dark:text-zinc-100">
-                Progression Badges & Accolades
+                Progression Badges
               </h2>
             </div>
             <p className="text-xs font-mono text-zinc-500 dark:text-zinc-400 mt-0.5">
@@ -791,7 +791,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 }`}
               >
                 {cat === 'all'
-                  ? 'All Accolades'
+                  ? 'All Badges'
                   : cat === 'liberal'
                   ? 'Liberal Studies'
                   : cat}
